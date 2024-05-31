@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="w-screen font-base">
+      <div>
+        <div class="flex flex-col md:flex-row">
+          <aside
+            id="sidebar"
+            class="fixed w-60 bg-[#C2151A] md:min-h-screen border-r border-gray-100 transform transition-transform ease-in-out duration-300"
+          >
+            <div class="flex items-center justify-center p-4 text-white">
+              <!-- logo -->
+              <a class="flex items-center mx-8 transition duration-200">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-10 h-10"
+                  viewBox="0 0 496 512"
+                >
+                  <path
+                    fill="#FFBFC1"
+                    d="M248 8C111 8 0 119 0 256s111 248 248 248s248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88s-88-39.4-88-88s39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2c18.8-35.4 55.6-59.8 98.5-59.8c2.4 0 4.8.4 7.1 1.1c13 4.2 26.6 6.9 40.9 6.9c14.3 0 28-2.7 40.9-6.9c2.3-.7 4.7-1.1 7.1-1.1c42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <!-- nav -->
+            <nav class="ml-8 mt-24 text-center">
+              <a
+                class="flex items-center px-2 text-white font-semibold text-md py-3 mt-7 transition duration-200"
+              >
+                <svg
+                  class="w-6 h-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 14 14"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9.5 1.5H11a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1h1.5"
+                    />
+                    <rect width="5" height="2.5" x="4.5" y=".5" rx="1" />
+                    <path d="M4.5 5.5h5M4.5 8h5m-5 2.5h5" />
+                  </g>
+                </svg>
+                <span class="px-2">FORM TERLAMBAT</span>
+              </a>
+              <a
+                class="flex items-center px-2 m-1 text-white font-semibold text-md py-3 mt-7 transition duration-200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6"
+                  viewBox="0 0 2048 2048"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M1536 1408h192v128h-320v-384h128v256zm-256-896H256V384h1024v128zm192 384q119 0 224 45t183 124t123 183t46 224q0 119-45 224t-124 183t-183 123t-224 46q-119 0-224-45t-183-124t-123-183t-46-224q0-119 45-224t124-183t183-123t224-46zm0 1024q93 0 174-35t142-96t96-142t36-175q0-93-35-174t-96-142t-142-96t-175-36q-93 0-174 35t-142 96t-96 142t-36 175q0 93 35 174t96 142t142 96t175 36zM1166 768q-109 48-200 128H256V768h910zm-391 384q-14 31-25 63t-21 65H256v-128h519zm-519 384h451q3 32 8 64t14 64H256v-128zm594 384q50 71 116 128H0V0h1536v707l-32-2q-16-1-32-1t-32 1t-32 2V128H128v1792h722z"
+                  />
+                </svg>
+                <span class="px-2">FORM KELUAR</span>
+              </a>
+              <a
+                class="flex items-center px-2 text-white font-semibold text-md py-3 mt-7 transition duration-200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6"
+                  viewBox="0 0 24 24"
+                >
+                  <g fill="none">
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-width="1.5"
+                      d="M12 7v6"
+                    />
+                    <circle cx="12" cy="16" r="1" fill="currentColor" />
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-width="1.5"
+                      d="M22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464c.974.974 1.3 2.343 1.41 4.536"
+                    />
+                  </g>
+                </svg>
+                <span class="px-2">FORM PELANGGAR</span>
+              </a>
+            </nav>
+          </aside>
+
+          <div
+            id="mainContent"
+            class="w-full md:flex-1 ml-60 transition-all duration-300"
+          >
+            <nav class="h-20 pl-4 pr-10 py-3 w-full flex justify-between bg-white text-white shadow-md">
+              <div class="flex items-center">
+                <button id="toggleSidebar" class="text-gray-800 mr-3 w-10 h-10">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    ></path>
+                  </svg>
+                </button>
+                <a rel="noopener noreferrer" href="" class="flex justify-start">
+                  <div class="flex items-center justify-center">
+                    <img
+                      class="h-10"
+                      src="https://smktelkom-pwt.sch.id/wp-content/uploads/2018/10/logo-telkom-schools.png"
+                      alt="logo"
+                    />
+                  </div>
+                </a>
+              </div>
+              <div class="flex items-center">
+                <a rel="noopener noreferrer" href="" class="flex justify-start">
+                 <p class="text-gray-900 font-bold">CARA MENGISI FORMULIR</p>
+                </a>
+              </div>
+            </nav>
+            <main>
+              <div>
+                <!-- content -->
+                <div class="py-10 px-16">
+                    aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const toggleSidebarButton = document.getElementById("toggleSidebar");
+      const sidebar = document.getElementById("sidebar");
+      const mainContent = document.getElementById("mainContent");
+
+      function toggleSidebar() {
+        sidebar.classList.toggle("-translate-x-64");
+        mainContent.classList.toggle("ml-0");
+        if (sidebar.classList.contains("-translate-x-64")) {
+          localStorage.setItem("sidebarStatus", "open");
+        } else {
+          localStorage.setItem("sidebarStatus", "closed");
+        }
+      }
+
+      toggleSidebarButton.addEventListener("click", toggleSidebar);
+
+      const storedSidebarStatus = localStorage.getItem("sidebarStatus");
+      if (storedSidebarStatus === "open") {
+        toggleSidebar();
+      }
+    </script>
+  </body>
+</html>

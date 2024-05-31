@@ -1,0 +1,79 @@
+body::-webkit-scrollbar {
+    width: var(--scroll-size, 10px);
+    height: var(--scroll-size, 10px);
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--scroll-track, transparent);
+    border-radius: var(--scroll-track-radius, var(--scroll-radius));
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color, grey);
+    background-image: var(--scroll-thumb, none);
+    border-radius: var(--scroll-thumb-radius, var(--scroll-radius));
+}
+
+:root {
+    --scroll-size: 5px;
+    --scroll-radius: 10px;
+    --scroll-track: rgb(255 255 255 / 10%);
+    --scroll-thumb-color: #fff;
+}
+
+html,
+body {
+    scrollbar-color: var(--scroll-thumb-color, grey) var(--scroll-track, transparent);
+    scrollbar-width: thin;
+}
+
+@mixin scroll-style($size: 10px,
+    $thumb: none,
+    $thumb-color: grey,
+    $thumb-radius: 10px,
+    $track-color: transparent,
+    $track-radius: 10px) {
+
+    // Respaldo para Firefox
+    scrollbar-color: $thumb-color $track-color;
+    scrollbar-width: thin;
+
+    // Navegadores basados en webkit
+    &::-webkit-scrollbar {
+        width: $size;
+        height: $size;
+
+        &-track {
+            background-color: $track-color;
+            border-radius: $track-radius;
+        }
+
+        &-thumb {
+            background-color: $thumb-color;
+            background-image: $thumb;
+            border-radius: $thumb-radius;
+        }
+    }
+}
+
+:root {
+    @include scroll-style($size: 10px, $thumb-color: #ccc);
+}
+
+.scroll {
+    @include scroll-style($size: var(--scroll-size),
+        $thumb: var(--scroll-thumb),
+        $thumb-color: var(--scroll-thumb-color),
+        $thumb-radius: var(--scroll-thumb-radius),
+        $track-color: var(--scroll-track-color),
+        $track-radius: var(--scroll-track-radius),
+    );
+}
+
+:root {
+    --scroll-size: 3px;
+    --scroll-radius: 10px;
+    --scroll-thumb-color: rgb(31 41 55);
+    --scroll-track-color: transparent;
+}
+
